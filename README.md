@@ -14,6 +14,7 @@ dbt_project.yml, packages.yml (with dbt_utils), profiles.example.yml, .gitignore
 Usage:
 unzip into your repo/workspace
 set warehouse creds in profiles.yml (use profiles.example.yml as a guide)
+
 run:
 dbt deps
 dbt seed
