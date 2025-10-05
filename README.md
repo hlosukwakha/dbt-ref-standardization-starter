@@ -1,4 +1,5 @@
 
+Link to Blog: https://thecloudsupportengineer.com/master-reference-data-management-tough-problems-and-how-to-solve-them/
 Download: dbt-ref-standardization-starter.zip
 
 What’s inside:
@@ -18,7 +19,11 @@ unzip into your repo/workspace
 set warehouse creds in profiles.yml (use profiles.example.yml as a guide)
 
 run:
+
 dbt deps
+
 dbt seed
+
 dbt run
+
 dbt test 
