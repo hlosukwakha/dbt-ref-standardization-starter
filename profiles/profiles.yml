@@ -1,0 +1,8 @@
+ref_standardization:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: /usr/app/state/ref_std.duckdb
+      schema: ref_std
+      threads: 4

@@ -1,0 +1,13 @@
+# Copy to ~/.dbt/profiles.yml and edit for your warehouse
+ref_standardization:
+  target: dev
+  outputs:
+    dev:
+      type: postgres  # or: bigquery / snowflake / redshift / duckdb
+      host: 127.0.0.1
+      user: db_user
+      password: db_password
+      dbname: analytics
+      schema: ref_std
+      port: 5432
+      threads: 4

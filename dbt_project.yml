@@ -1,0 +1,28 @@
+name: 'ref_standardization'
+version: '1.0.0'
+config-version: 2
+
+profile: 'ref_standardization'
+
+model-paths: ['models']
+seed-paths: ['seeds']
+macro-paths: ['macros']
+snapshot-paths: ['snapshots']
+test-paths: ['tests']
+
+models:
+  ref_standardization:
+    +materialized: view
+    staging:
+      +materialized: view
+    marts:
+      ref:
+        +materialized: table
+
+seeds:
+  ref_standardization:
+    +column_types:
+      numeric: integer
+      minor_unit: integer
+vars:
+  use_demo_sources: true

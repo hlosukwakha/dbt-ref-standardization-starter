@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: erp_a
+    schema: raw_erp_a
+    tables:
+      - name: countries
+        description: "ERP A country dimension"
+  - name: erp_b
+    schema: raw_erp_b
+    tables:
+      - name: countries
+        description: "ERP B country dimension"
+  - name: erp_c
+    schema: raw_erp_c
+    tables:
+      - name: currencies
+        description: "ERP C currency dimension"

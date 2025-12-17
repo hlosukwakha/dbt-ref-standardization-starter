@@ -1,0 +1,16 @@
+services:
+  dbt:
+    build: .
+    container_name: ref_std_dbt
+    working_dir: /usr/app/project
+    environment:
+      - DBT_PROFILES_DIR=/usr/app/profiles
+      - DBT_PROJECT_DIR=/usr/app/project
+    volumes:
+      - ./:/usr/app/project
+      - ./profiles:/usr/app/profiles
+      - dbt_state:/usr/app/state
+    command: ["dbt","build"]
+
+volumes:
+  dbt_state:

@@ -1,0 +1,5 @@
+currency_code,currency_name,numeric,minor_unit,valid_from,valid_to,is_current
+EUR,Euro,978,2,1999-01-01,,true
+USD,United States dollar,840,2,1792-04-02,,true
+XOF,West African CFA franc,952,0,1945-12-26,,true
+GBP,Pound sterling,826,2,1694-07-27,,true

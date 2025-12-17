@@ -1,0 +1,5 @@
+country_code,country_name,alpha3,numeric,geonames_id,valid_from,valid_to,is_current
+NL,Netherlands,NLD,528,2750405,1900-01-01,,true
+GB,United Kingdom,GBR,826,2635167,1900-01-01,,true
+CI,Côte d’Ivoire,CIV,384,2287781,1986-01-01,,true
+US,United States,USA,840,6252001,1776-07-04,,true

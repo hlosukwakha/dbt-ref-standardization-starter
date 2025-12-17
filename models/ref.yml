@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: dim_country
+    description: Canonical list of countries (ISO-3166-1) with UN M49 regions.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: [country_code]
+      - not_null:
+          column_name: country_code
+
+  - name: dim_currency
+    description: Canonical list of currencies (ISO-4217).
+    tests:
+      - unique:
+          column_name: currency_code
+      - not_null:
+          column_name: minor_unit
+
+  - name: map_country_source
+    description: Mapping of source system country codes/text to canonical ISO-3166-1 alpha-2 codes.
+    tests:
+      - relationships:
+          to: ref('dim_country')
+          field: country_code
+          column_name: canonical_country_code
+
+  - name: map_currency_source
+    description: Mapping of source system currency codes to ISO-4217.
+    tests:
+      - relationships:
+          to: ref('dim_currency')
+          field: currency_code
+          column_name: canonical_currency_code
