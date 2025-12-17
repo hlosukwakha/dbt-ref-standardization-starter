@@ -146,6 +146,7 @@ Run with:
 dbt test
 ```
 
+
 ---
 
 ## Running the Project (Docker)
@@ -172,6 +173,21 @@ make build_all
 
 ```bash
 docker compose run --rm dbt dbt test
+```
+
+```
+21:32:07  1 of 6 START test dbt_utils_unique_combination_of_columns_dim_country_country_code  [RUN]
+21:32:07  2 of 6 START test not_null_dim_country_country_code ............................ [RUN]
+21:32:07  3 of 6 START test not_null_dim_currency_minor_unit ............................. [RUN]
+21:32:07  4 of 6 START test relationships_map_country_source_canonical_country_code__country_code__ref_dim_country_  [RUN]
+21:32:07  3 of 6 PASS not_null_dim_currency_minor_unit ................................... [PASS in 0.07s]
+21:32:07  2 of 6 PASS not_null_dim_country_country_code .................................. [PASS in 0.07s]
+21:32:07  4 of 6 PASS relationships_map_country_source_canonical_country_code__country_code__ref_dim_country_  [PASS in 0.07s]
+21:32:07  5 of 6 START test relationships_map_currency_source_canonical_currency_code__currency_code__ref_dim_currency_  [RUN]
+21:32:07  1 of 6 PASS dbt_utils_unique_combination_of_columns_dim_country_country_code ... [PASS in 0.08s]
+21:32:07  6 of 6 START test unique_dim_currency_currency_code ............................ [RUN]
+21:32:07  6 of 6 PASS unique_dim_currency_currency_code .................................. [PASS in 0.02s]
+21:32:07  5 of 6 PASS relationships_map_currency_source_canonical_currency_code__currency_code__ref_dim_currency_  [PASS in 0.03s]
 ```
 
 Failures usually indicate:
